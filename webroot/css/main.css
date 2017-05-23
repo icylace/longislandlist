@@ -1,0 +1,138 @@
+body {
+  background-color: #343332;
+  color: #777;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #CCC;
+  font-size: 120%;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 20px;
+  margin: 0;
+  padding: 20px 2px;
+}
+
+p {
+  margin: 0;
+}
+
+.sidebar {
+  border-right: 1px solid #222;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 20%;
+}
+
+.heading {
+  border-bottom: 1px solid #222;
+  height: 80px;
+  padding: 0 10px;
+}
+
+.listings-container {
+  height: 100%;
+  overflow: auto;
+}
+
+.listings {
+  margin: 0;
+  list-style-type: none;
+  padding-bottom: 80px;
+}
+.listings .item {
+  border-bottom: 1px solid #222;
+  cursor: pointer;
+  padding: 10px;
+  text-decoration: none;
+}
+.listings .item:last-child {
+  border-bottom: none;
+}
+.listings .item .title {
+  color: #CCC;
+  display: block;
+  letter-spacing: 1px;
+}
+.listings .item.active {
+  background-color: #A5D26A;
+}
+.listings .item.active .title,
+.listings .item.active:hover .title {
+  color: #444;
+}
+.listings .item:hover .title {
+  color: #A5D26A;
+}
+.listings .item.active .title:hover {
+  color: #444;
+}
+
+.map {
+  bottom: 0;
+  left: 20%;
+  position: absolute;
+  top: 0;
+  width: 80%;
+}
+
+.mapboxgl-popup {
+  padding-bottom: 20px;
+}
+.mapboxgl-popup-close-button {
+  display: none;
+}
+.mapboxgl-popup-content {
+  font-size: 15px;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+  line-height: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+.location-info {
+  padding: 10px;
+}
+.location-info img {
+  height: 32px;
+  width: 32px;
+}
+.location-info .location-wifi {
+  height: 20px;
+  margin-left: 4px;
+  width: 20px;
+}
+.location-info .location-notes {
+  margin-top: 12px;
+}
+.location-link {
+  color: #444;
+}
+.location-directions {
+  text-align: right;
+}
+.location-phone {
+  margin-right: 8px;
+}
+
+.mapboxgl-popup-content h3 {
+  background-color: #A5D26A;
+  color: #444;
+  font-size: 120%;
+  line-height: 20px;
+  margin: 0;
+  padding: 10px;
+}
+.mapboxgl-popup-content h4 {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
