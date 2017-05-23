@@ -69,7 +69,7 @@ if (!env('APP_NAME')) {
   (new josegonzalez\Dotenv\Loader(ROOT . '/.env'))->parse()->toEnv();
 }
 
-Configure::write('MapBox.accessToken', env('MAPBOX_ACCESS_TOKEN', null));
+Configure::write('Mapbox.accessToken', env('MAPBOX_ACCESS_TOKEN', null));
 
 /*
  * Read configuration file and inject configuration into various

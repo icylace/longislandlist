@@ -22,7 +22,7 @@ class LocationsController extends AppController
     public function index()
     {
         $locations = $this->Locations->find('all', ['order' => 'Locations.name ASC']);
-        $mapBoxAccessToken = Configure::read('MapBox.accessToken');
+        $mapBoxAccessToken = Configure::read('Mapbox.accessToken');
         $this->set(compact('locations', 'mapBoxAccessToken'));
 
         // $locations = $this->paginate($this->Locations);
