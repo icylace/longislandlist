@@ -51,7 +51,6 @@ $this->assign('title', 'The Long Island List:  Coffee Places');
 
   <?= $this->Html->script([
     'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js',
-    'https://code.jquery.com/ui/1.12.1/jquery-ui.min.js',
     'https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.js',
   ]) ?>
   <?= $this->Html->scriptBlock("mapboxgl.accessToken = '$mapBoxAccessToken'") ?>
