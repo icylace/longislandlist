@@ -324,7 +324,7 @@ class LocationsSeed extends AbstractSeed
                 'password'   => 'gingerandkale',
                 'latitude'   => 40.737923,
                 'longitude'  => -73.051309,
-                'notes'      => 'No public power outlets.',
+                'notes'      => 'Has outdoor seating.  No public power outlets.',
             ],
             // Eateries
             [
