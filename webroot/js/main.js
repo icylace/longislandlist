@@ -23,12 +23,12 @@
         center: currentFeature.geometry.coordinates,
         zoom: 10,
       })
-      createPopUp(currentFeature)
+      createPopUp(currentFeature, $next)
       $(".active").removeClass("active")
       $next.addClass("active")
     }
 
-    function createPopUp(currentFeature) {
+    function createPopUp(currentFeature, $item) {
       $(".mapboxgl-popup").remove()
       var props = currentFeature.properties
       var markups = [
@@ -47,10 +47,13 @@
           + "'>Go there <img class='location-wifi' src='/img/1495142566_Google-Maps.png'></a></p>",
         "</div>",
       ]
-      new mapboxgl.Popup({ closeOnClick: false })
+      var popup = new mapboxgl.Popup({ closeOnClick: false })
         .setLngLat(currentFeature.geometry.coordinates)
         .setHTML(markups.join(""))
         .addTo(map)
+      popup.on("close", function (e) {
+        $item.removeClass("active")
+      })
     }
 
     function createGeoJson(locations) {

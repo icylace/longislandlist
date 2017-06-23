@@ -88,7 +88,10 @@ p {
   padding-bottom: 20px;
 }
 .mapboxgl-popup-close-button {
-  display: none;
+  color: #444;
+  float: right;
+  padding: 0.5em;
+  position: static;
 }
 .mapboxgl-popup-content {
   font-size: 15px;
