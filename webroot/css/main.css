@@ -147,7 +147,7 @@ p {
     flex-direction: column-reverse;
   }
   .map {
-    flex-grow: 1;
+    flex-grow: 1.5;
   }
   .listings-wrapper {
     height: 10%;
