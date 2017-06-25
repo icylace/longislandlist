@@ -47,13 +47,13 @@
           + "'>Go there <img class='location-wifi' src='/img/1495142566_Google-Maps.png'></a></p>",
         "</div>",
       ]
-      var popup = new mapboxgl.Popup({ closeOnClick: false })
+      new mapboxgl.Popup({ closeOnClick: false })
         .setLngLat(currentFeature.geometry.coordinates)
         .setHTML(markups.join(""))
         .addTo(map)
-      popup.on("close", function (e) {
-        $item.removeClass("active")
-      })
+        .on("close", function (e) {
+          $item.removeClass("active")
+        })
     }
 
     function createGeoJson(locations) {
@@ -92,6 +92,8 @@
     }
 
     function setupMap(locations) {
+      setupLocationList(locations)
+
       var initLatitude = 40.789143
       var initLongitude = -73.134961
 
@@ -115,7 +117,6 @@
             "icon-allow-overlap": true,
           },
         })
-        setupLocationList(locations)
       })
 
       // Use the cursor "pointer" icon when hovering over locations on the map.

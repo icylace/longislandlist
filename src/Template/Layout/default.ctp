@@ -33,21 +33,18 @@ $this->assign('title', 'The Long Island List:  Coffee Places');
 </head>
 <body>
 
-  <div class="container clearfix">
-    <div class="sidebar">
+  <main>
+    <div class="locations-list">
       <div class="heading">
         <h1><?= $this->fetch('title') ?></h1>
       </div>
-      <?= $this->Flash->render() ?>
-      <?php /* * ?>
-      <?= $this->fetch('content') ?>
-      <?php /* */ ?>
-      <div class="listings-container">
+      <div class="listings-wrapper">
         <ul class="listings" id="listings"></ul>
       </div>
     </div>
+    <?= $this->Flash->render() ?>
     <div class="map" id="map"></div>
-  </div>
+  </main>
 
   <?= $this->Html->script([
     'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js',

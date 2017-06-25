@@ -1,44 +1,48 @@
 body {
   background-color: #343332;
-  color: #777;
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+  color: #777777;
+  font-family: "Source Sans Pro", "Helvetica Neue", sans-serif;
   font-size: 15px;
   line-height: 22px;
   margin: 0;
   padding: 0;
 }
 
+main {
+  display: flex;
+  height: 100vh;
+}
+
 h1 {
-  color: #CCC;
+  color: #CCCCCC;
   font-size: 120%;
-  font-weight: 400;
   letter-spacing: 1px;
-  line-height: 20px;
-  margin: 0;
-  padding: 20px 2px;
+  /* https://blog.typekit.com/2016/08/17/flexible-typography-with-css-locks/ */
+  line-height: 1.2;
+  margin: 0.75em 0;
+  padding: 0.75 0;
 }
 
 p {
   margin: 0;
 }
 
-.sidebar {
-  border-right: 1px solid #222;
-  height: 100%;
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 20%;
+.locations-list {
+  border-right: 1px solid #222222;
+  display: flex;
+  flex-basis: 0;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .heading {
-  border-bottom: 1px solid #222;
-  height: 80px;
+  border-bottom: 1px solid #222222;
+  flex-basis: 0;
   padding: 0 10px;
 }
 
-.listings-container {
+.listings-wrapper {
+  flex-grow: 1;
   height: 100%;
   overflow: auto;
 }
@@ -46,19 +50,16 @@ p {
 .listings {
   margin: 0;
   list-style-type: none;
-  padding-bottom: 80px;
+  /*padding-bottom: 80px;*/
 }
 .listings .item {
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid #222222;
   cursor: pointer;
   padding: 10px;
   text-decoration: none;
 }
-.listings .item:last-child {
-  border-bottom: none;
-}
 .listings .item .title {
-  color: #CCC;
+  color: #CCCCCC;
   display: block;
   letter-spacing: 1px;
 }
@@ -67,35 +68,31 @@ p {
 }
 .listings .item.active .title,
 .listings .item.active:hover .title {
-  color: #444;
+  color: #444444;
 }
 .listings .item:hover .title {
   color: #A5D26A;
 }
 .listings .item.active .title:hover {
-  color: #444;
+  color: #444444;
 }
 
 .map {
-  bottom: 0;
-  left: 20%;
-  position: absolute;
-  top: 0;
-  width: 80%;
+  flex-grow: 4;
 }
 
 .mapboxgl-popup {
   padding-bottom: 20px;
 }
 .mapboxgl-popup-close-button {
-  color: #444;
+  color: #444444;
   float: right;
   padding: 0.5em;
   position: static;
 }
 .mapboxgl-popup-content {
   font-size: 15px;
-  font-family: 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", sans-serif;
   line-height: 22px;
   margin: 0;
   padding: 0;
@@ -108,16 +105,16 @@ p {
   height: 32px;
   width: 32px;
 }
-.location-info .location-wifi {
+.location-wifi {
   height: 20px;
   margin-left: 4px;
   width: 20px;
 }
-.location-info .location-notes {
+.location-notes {
   margin-top: 12px;
 }
 .location-link {
-  color: #444;
+  color: #444444;
 }
 .location-directions {
   text-align: right;
@@ -128,7 +125,7 @@ p {
 
 .mapboxgl-popup-content h3 {
   background-color: #A5D26A;
-  color: #444;
+  color: #444444;
   font-size: 120%;
   line-height: 20px;
   margin: 0;
@@ -138,4 +135,39 @@ p {
   display: block;
   margin: 0;
   padding: 0;
+}
+
+/* -----------------------------------------------------------------------------
+//  Recommended media query breakpoints:
+//  https://medium.freecodecamp.com/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862
+// -------------------------------------------------------------------------- */
+
+@media (max-width: 599px) {
+  main {
+    flex-direction: column-reverse;
+  }
+  .map {
+    flex-grow: 1;
+  }
+  .listings-wrapper {
+    height: 10%;
+  }
+  .locations-list {
+    border-right: 0;
+  }
+  .heading {
+    font-size: 70%;
+  }
+}
+
+@media (min-width: 600px) {
+  .map {
+    flex-grow: 2.5;
+  }
+}
+
+@media (min-width: 900px) {
+  .map {
+    flex-grow: 4;
+  }
 }
