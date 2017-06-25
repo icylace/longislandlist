@@ -19,7 +19,7 @@ $this->assign('title', 'The Long Island List:  Coffee Places');
 <html>
 <head>
   <?= $this->Html->charset() ?>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title><?= $this->fetch('title') ?></title>
   <?= $this->Html->meta('icon') ?>
   <?= $this->fetch('meta') ?>
