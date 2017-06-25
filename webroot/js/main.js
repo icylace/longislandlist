@@ -97,7 +97,7 @@
       var initLatitude = 40.789143
       var initLongitude = -73.134961
 
-      map = new mapboxgl.Map({
+      var map = new mapboxgl.Map({
         container: "map",
         style: "mapbox://styles/icylace/cj2tp8v4700172rqmewo892or",
         center: [initLongitude, initLatitude],
@@ -153,20 +153,20 @@
           }
         }
 
-        switchLocation(spot, $("#location-" + selectedFeatureIndex))
+        var $location = $("#location-" + selectedFeatureIndex)
 
-        var headingHeight = 80
+        switchLocation(spot, $location)
 
-        // Based on:
-        // https://stackoverflow.com/a/11301878/1935675
-        $(".listings-container").scrollTop($(".listings-container").scrollTop() + $("#location-" + selectedFeatureIndex).position().top - headingHeight)
+        $location[0].scrollIntoView()
       })
+
+      return map
     }
 
-    var map = null
+    var map
 
     $.get("/locations.json", function (data) {
-      setupMap(createGeoJson(data.locations))
+      map = setupMap(createGeoJson(data.locations))
     })
 
   })
