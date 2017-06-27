@@ -32,6 +32,7 @@ $this->assign('title', 'The Long Island List:  Coffee Places');
   ]) ?>
 </head>
 <body>
+
   <!--[if lt IE 11]>
     <p class="browser-upgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
