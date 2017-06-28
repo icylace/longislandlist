@@ -36,7 +36,7 @@
         "<h3>" + (props.website ? "<a class='location-link' href='" + props.website + "'>" + props.name + "</a>" : props.name) + "</h3>",
         "<div class='location-info'>",
         "<p>" + props.address + ", " + props.city + "</p>",
-        (props.phone ? "<span class='location-phone'>" + props.phoneFormatted + "</span>" : null),
+        (props.phone ? "<a class='location-phone' href='tel:" + props.phone + "'>" + props.phoneFormatted + "</a>" : null),
         (props.website ? "<span><a href='" + props.website + "'><img src='/img/1495139159_5381_-_Web.png'></a></span>" : null),
         (props.instagram ? "<span><a href='" + props.instagram + "'><img src='/img/1495139547_instagram.png'></a></span>" : null),
         (props.facebook ? "<span><a href='" + props.facebook + "'><img src='/img/1495139719_facebook.png'></a></span>" : null),

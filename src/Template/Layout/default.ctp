@@ -23,6 +23,7 @@ $this->assign('title', 'The Long Island List:  Coffee Places');
   <title><?= $this->fetch('title') ?></title>
   <?= $this->Html->meta('icon') ?>
   <?= $this->fetch('meta') ?>
+  <meta name="format-detection" content="telephone=no">
   <?= $this->Html->css([
     'https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono',
     'https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css',

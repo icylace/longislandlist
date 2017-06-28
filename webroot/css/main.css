@@ -26,6 +26,11 @@ p {
   margin-bottom: 0;
 }
 
+a[href^="tel:"]:before {
+  content: "\260E";
+  margin-right: 0.5em;
+}
+
 .locations-list {
   border-right: 1px solid #222222;
   display: flex;
