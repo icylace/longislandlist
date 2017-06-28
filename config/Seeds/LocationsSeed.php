@@ -327,7 +327,7 @@ class LocationsSeed extends AbstractSeed
                 'notes'      => null,
             ],
             [
-                'name'       => 'The Golden Sparrow',
+                'name'       => 'Golden Sparrow, The',
                 'website'    => 'https://www.goldensparrowmarket.com/',
                 'instagram'  => '',
                 'facebook'   => '',
