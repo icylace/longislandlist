@@ -82,6 +82,7 @@ p {
 }
 
 .mapboxgl-popup {
+  max-width: 80vw;
   padding-bottom: 20px;
 }
 .mapboxgl-popup-close-button {

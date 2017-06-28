@@ -21,6 +21,7 @@
     function switchLocation(currentFeature, $next) {
       map.flyTo({
         center: currentFeature.geometry.coordinates,
+        offset: [0, -$next.height() * 1.5],
         zoom: 10,
       })
       createPopUp(currentFeature, $next)
