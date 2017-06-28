@@ -25,7 +25,7 @@ $this->assign('title', 'The Long Island List:  Coffee Places');
   <?= $this->fetch('meta') ?>
   <?= $this->Html->css([
     'https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono',
-    'https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.css',
+    'https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css',
     'base.css',
     'cake.css',
     'main.css',
@@ -55,7 +55,7 @@ $this->assign('title', 'The Long Island List:  Coffee Places');
 
   <?= $this->Html->script([
     'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js',
-    'https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.js',
+    'https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js',
   ]) ?>
   <?= $this->Html->scriptBlock("mapboxgl.accessToken = '$mapBoxAccessToken'") ?>
   <?= $this->Html->script('main.js') ?>
